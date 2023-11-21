@@ -3,7 +3,7 @@
 import 'bootstrap'; // import bootstrap elements and js
 import '../styles/main.scss';
 import {
-  getRequest, postRequest, patchRequest, deleteRequest
+  getRequest, postRequest, patchRequest, deleteRequest,
 } from '../api/promises';
 
 const htmlStructure = () => {
@@ -23,16 +23,16 @@ const events = () => {
   });
   document.querySelector('#post-name').addEventListener('click', () => {
     // update this object with your name
-    const payload = { name: 'YOUR NICKNAME' };
+    const payload = { name: 'Skeo' };
     postRequest(payload).then(console.warn);
   });
   document.querySelector('#patch-name').addEventListener('click', () => {
     // update this object with your name and firebaseKey that was logged in the console when you created your name in the database
-    const payload = { name: 'YOUR FULL NAME', firebaseKey: '' };
+    const payload = { name: 'Skeo', firebaseKey: '-NjjNkVICmFY7flwvZWY' };
     patchRequest(payload).then(console.warn);
   });
   document.querySelector('#delete-name').addEventListener('click', () => {
-    const firebaseKey = '';
+    const firebaseKey = '-NjjNkVICmFY7flwvZWY';
     deleteRequest(firebaseKey).then(console.warn);
   });
 };

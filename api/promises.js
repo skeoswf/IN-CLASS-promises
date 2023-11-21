@@ -1,5 +1,5 @@
 const jokeEndpoint = 'https://v2.jokeapi.dev/joke/Programming?safe-mode&type=twopart';
-const postEndpoint = 'https://teaching-promises-default-rtdb.firebaseio.com';
+const postEndpoint = 'https://in-class-promise-e-default-rtdb.firebaseio.com';
 
 const getRequest = () => new Promise((resolve, reject) => {
   fetch(jokeEndpoint, {
@@ -60,5 +60,5 @@ const patchRequest = (payload) => new Promise((resolve, reject) => {
 // 6. OPTIONAL: Do you see an opportunity to create a utility function for your promise calls?
 
 export {
-  getRequest, postRequest, patchRequest, deleteRequest
+  getRequest, postRequest, patchRequest, deleteRequest, jokeEndpoint, postEndpoint
 };
